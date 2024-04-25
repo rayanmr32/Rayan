@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Rayan - Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #074F57;
+        }
+        header {
+            background-color: #077187;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #74a57f;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #9ece9a;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #e4c5af;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mohammed Rayan</h1>
+    <p>Welcome to my personal website!</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <div class="dropdown">
+        <button class="dropbtn">Projects</button>
+        <div class="dropdown-content">
+            <a href="#project1">Project 1</a>
+            <a href="#project2">Project 2</a>
+            <a href="#project3">Project 3</a>
+        </div>
+    </div>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>Intro: </h2>
+    <p>HTML and CSS are two languages that work together to create everything that you see when you look at something on the internet</p>
+    <div class="dropdown">
+        <button class="dropbtn">Projects</button>
+        <div class="dropdown-content">
+            <a href="#project1">Project 1</a>
+            <a href="#project2">Project 2</a>
+            <a href="#project3">Project 3</a>
+        </div>
+</section>
+
+<section id="Calculator">
+    <h2>Calculator in JS:</h2>
+    <p></p>
+    <!-- this is the start of the  calculator  -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown Calculator</title>
+  <style>
+    /* Styling for dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    /* Styling for dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+    /* Show dropdown content when dropdown is hovered over */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    /* Styling for calculator */
+    #calculator {
+      text-align: center;
+    }
+    .button {
+      width: 40px;
+      height: 40px;
+      margin: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn">Calculator</button>
+  <div class="dropdown-content">
+    <div id="calculator">
+      <input type="text" id="display" disabled>
+      <br>
+      <button class="button" onclick="appendNumber('7')">7</button>
+      <button class="button" onclick="appendNumber('8')">8</button>
+      <button class="button" onclick="appendNumber('9')">9</button>
+      <button class="button" onclick="appendOperator('+')">+</button>
+      <br>
+      <button class="button" onclick="appendNumber('4')">4</button>
+      <button class="button" onclick="appendNumber('5')">5</button>
+      <button class="button" onclick="appendNumber('6')">6</button>
+      <button class="button" onclick="appendOperator('-')">-</button>
+      <br>
+      <button class="button" onclick="appendNumber('1')">1</button>
+      <button class="button" onclick="appendNumber('2')">2</button>
+      <button class="button" onclick="appendNumber('3')">3</button>
+      <button class="button" onclick="appendOperator('*')">*</button>
+      <br>
+      <button class="button" onclick="appendNumber('0')">0</button>
+      <button class="button" onclick="appendDecimal()">.</button>
+      <button class="button" onclick="clearDisplay()">C</button>
+      <button class="button" onclick="calculate()">=</button>
+      <button class="button" onclick="appendOperator('/')">/</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let display = document.getElementById('display');
+
+  function appendNumber(number) {
+    display.value += number;
+  }
+
+  function appendOperator(operator) {
+    display.value += operator;
+  }
+
+  function appendDecimal() {
+    if (!display.value.includes('.')) {
+      display.value += '.';
+    }
+  }
+
+  function clearDisplay() {
+    display.value = '';
+  }
+
+  function calculate() {
+    try {
+      display.value = eval(display.value);
+    } catch(error) {
+      display.value = 'Error';
+    }
+  }
+</script>
+
+</body>
+</html>
+<!-- This is the end of calculator code -->
+</section>
+
+<!-- <section id="Icon">
+    <h2>Icons In React</h2>
+    <p>These are the social media icons made using react library</p>
+</section> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<section id="Icon">
+    <h2>Icons In React</h2>
+    <p>These are the social media icons made using React library</p>
+    <div>
+      <a href="https://www.instagram.com/mohammedfaiz0103?igsh=NGNwc2c5YmdlN2o3" target="_blank"><i class="fab fa-instagram"></i></a> <!-- Instagram icon -->
+      <a href="https://www.linkedin.com/in/rayanmr32" target="_blank"><i class="fab fa-linkedin"></i></a> <!-- LinkedIn icon -->
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a> <!-- GitHub icon -->
+      
+        <!-- You can add more icons here -->
+    </div>
+</section>
+
+</body>
+</html>
+
+
+
+<footer style="background-color: transparent; text-align: center;">
+    <p style="font-weight: bold;">&copy; 2024 Mohammed Rayan. All rights reserved.</p>
+</footer>
+
+</body>
+
+</html>
