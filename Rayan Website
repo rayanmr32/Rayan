@@ -9,16 +9,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #074F57;
+            background-color: #570707;
         }
         header {
-            background-color: #077187;
+            background-color: #87073c;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #74a57f;
+            background-color: #76a574;
             padding: 10px;
             text-align: center;
         }
@@ -63,7 +63,7 @@
             display: block;
         }
         .dropdown:hover .dropbtn {
-            background-color: #9ece9a;
+            background-color: #ce9a9a;
         }
         section {
             padding: 20px;
